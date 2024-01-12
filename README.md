@@ -123,7 +123,8 @@ def home(request):
 ## PHASE5: 
 **Step 16:** make DEBUG = False in settings.py  
 **Step17:** make   
-```ALLOWED_HOSTS = ['*']```
+```ALLOWED_HOSTS = ['*']
+```
 **Step 18(optional):** 
 ```
 DATABASES = {  
