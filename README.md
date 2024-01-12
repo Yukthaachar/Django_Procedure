@@ -1,13 +1,13 @@
 # Django_Procedure
 
-How to add multiple apps in a single project. 
+How to add multiple apps in a single project., 
 Here are the steps to follow :-
 
 ## PHASE1: Project creation 
-Step1 : django-admin startproject django1
-Step2 : cd django1
-Step3 : django-admin startapp factorial1
-Step4 : python manage.py runserver
+Step1 : django-admin startproject django1,
+Step2 : cd django1,
+Step3 : django-admin startapp factorial1,
+Step4 : python manage.py runserver,
 check if project is created by going here http://127.0.0.1:8000/
 
 ## PHASE2: Creating urls 
