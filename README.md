@@ -83,7 +83,7 @@ def home(request):
 <h1>Factorial Program</h1>
 <form method="POST">
 {% csrf_token %}
-{{form.as_p}}     # we can use (p, ul, table)  where   p-paragraph, ul-unordered list, table-table
+{{form.as_p}}    
 <button type="submit">find factorial</button>
 </form>
 {% if param1 %}
@@ -91,7 +91,8 @@ def home(request):
 {% endif %}
 </body>
 ```
-
+ * we can use (p, ul, table)  where  p-paragraph, ul-unordered list, table-table*  
+   
 **Step15 :** in factorial/views.py, 
 ```
 from django.shortcuts import render
@@ -103,8 +104,7 @@ def home(request):
           data=form1.cleaned_data
           n1=data.get("input")
           result=fact(n1)
-       return render(request,"factorial1/index.html",{'param1':result,'param2':n1,
-                                                          'form':form1})
+       return render(request,"factorial1/index.html",{'param1':result, 'param2':n1, 'form':form1})
      else:
           form1=inputform()  
      return render(request,"factorial1/index.html",{'param1':result, 'param2':n1, 'form':form1})
