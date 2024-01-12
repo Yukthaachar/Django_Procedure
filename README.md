@@ -28,23 +28,23 @@ INSTALLED_APPS = [...,"factorial1", ]
 
 Step8 : Go to views.py
 ```
-                      def home(request):
-                               return render(request,'factorial1/index.html',{'param1':”hello world”})
+def home(request):
+    return render(request,'factorial1/index.html',{'param1':”hello world”})
 ```
 
 Step9 : Create urls.py in factorial1 and add
 ```
-                           from django.urls import path
-                           from factorial1.views import home
-                           urlpatterns = [path('', home),]
+from django.urls import path
+from factorial1.views import home
+urlpatterns = [path('', home),]
 ```
 
 Step10 : In django1/urls.py
 ```
-                        from django.urls import include
-                        urlpatterns = [
-                                 path("" ,include("factorial1.urls"))
-                        ]
+from django.urls import include
+urlpatterns = [
+path("" ,include("factorial1.urls"))
+]
 ```
 
 Step11 : python manage.py runserver
@@ -68,55 +68,53 @@ def home(request):
 
 ## PHASE4: add forms to take input from the user ##
  We can modify the code using forms
-  Step13 : create forms.py in the factorial1 folder
-         ```
-               from django import forms
-               class inputform(forms.Form):
-                name=forms.CharField(max_Length=10)
-                input=forms.IntegerField(min_value=$1,max_value=$2,lable="$3")  
-        ```
+ Step13 : create forms.py in the factorial1 folder
+ ```
+ from django import forms
+ class inputform(forms.Form):
+      name=forms.CharField(max_Length=10)
+      input=forms.IntegerField(min_value=$1,max_value=$2,lable="$3")  
+  ```
   $ may be any numbers for min and max values and characters for the label
 
 Step14 : in index.html
 ```
-           <body>
-            <h1>Factorial Program</h1>
-            <form method="POST">
-            {% csrf_token %}
-            {{form.as_p}}    
-          # we can use (p, ul, table)  where   p-paragraph, ul-unordered list, table-table
-           <button type="submit">find factorial</button>
-            </form>
-            {% if param1 %}
-            <h2>Factorial of {{param2}} is {{param1}}</h2>
-            {% endif %}
-            </body>
+<body>
+<h1>Factorial Program</h1>
+<form method="POST">
+{% csrf_token %}
+{{form.as_p}}     # we can use (p, ul, table)  where   p-paragraph, ul-unordered list, table-table
+<button type="submit">find factorial</button>
+</form>
+{% if param1 %}
+<h2>Factorial of {{param2}} is {{param1}}</h2>
+{% endif %}
+</body>
 ```
 
 Step15 : in factorial/views.py, 
 ```
-               from django.shortcuts import render
-               from factorial1.forms import inputform
-               def home(request):
-                       if request.method=="POST":
-                                  form1=inputform(request.POST)
-                                  if form1.is_valid():
-                                           data=form1.cleaned_data
-                                            n1=data.get("input")
-                                            result=fact(n1)
-                                     return render(request,"factorial1/index.html",{'param1':result,'param2':n1,
+from django.shortcuts import render
+from factorial1.forms import inputform
+def home(request):
+    if request.method=="POST":
+       form1=inputform(request.POST)
+       if form1.is_valid():
+          data=form1.cleaned_data
+          n1=data.get("input")
+          result=fact(n1)
+       return render(request,"factorial1/index.html",{'param1':result,'param2':n1,
                                                           'form':form1})
-                       else:
-                                form1=inputform()  
-                      return render(request,"factorial1/index.html",{'param1':result,'param2':n1,
-                                                         'form':form1})
+     else:
+          form1=inputform()  
+     return render(request,"factorial1/index.html",{'param1':result, 'param2':n1, 'form':form1})
 ```
 ```
-                                            def fact(n1):  
-                                                  result=1
-                                                  for i in range(1,n1+1,1):
-                                                      result=result*i
-                                                  return result
+ def fact(n1):  
+     result=1
+     for i in range(1,n1+1,1):
+         result=result*i
+     return result
 ```
                                            
 
