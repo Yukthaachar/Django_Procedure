@@ -11,8 +11,8 @@ Step4 : python manage.py runserver
 check if project is created by going here http://127.0.0.1:8000/
 
 ## PHASE2: Creating urls 
-Step5 : Create factorial1/templates/factorial1 folder    (appname/templates/appname)
-Step6:  Create index.html file with 'Hello World' and {{param1}}
+Step5 : Create factorial1/templates/factorial1 folder    (appname/templates/appname)  
+Step6:  Create index.html file with 'Hello World' and {{param1}}  
 
 ```
 <body>
@@ -47,14 +47,14 @@ path("" ,include("factorial1.urls"))
 ]
 ```
 
-Step11 : python manage.py runserver
-You will get output as 
-Hello World 
-hello world
+Step11 : python manage.py runserver  
+You will get output as   
+Hello World   
+hello world  
 
 ## PHASE3: Logic to be implemented in views.py 
 Step12 :
-Something like this
+Something like this  
 ```
 from django.shortcuts import render
 def home(request):
@@ -67,8 +67,8 @@ def home(request):
 ```
 
 ## PHASE4: add forms to take input from the user ##
- We can modify the code using forms
- Step13 : create forms.py in the factorial1 folder
+ We can modify the code using forms  
+ Step13 : create forms.py in the factorial1 folder  
  ```
  from django import forms
  class inputform(forms.Form):
@@ -121,18 +121,18 @@ def home(request):
 ## we will make the modifications 
 
 ## PHASE5: 
-Step 16: make DEBUG = False in settings.py
-Step17: make 
+Step 16: make DEBUG = False in settings.py  
+Step17: make   
 ```ALLOWED_HOSTS = ['*']```
-Step 17(optional):   DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-Step 18 : STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-Step 19: write python manage.py collectstatic in terminal
-(Optional , only used if we are using database operations)
-Step 20: type "python manage.py makemigrations" in terminal
-Step 21:type  "python manage.py migrate in terminal" in terminal
-Step 22:  python manage.py runserver
+Step 17(optional):   DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.sqlite3',  
+        'NAME': BASE_DIR / 'db.sqlite3',  
+    }  
+}  
+Step 18 : STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+Step 19: write python manage.py collectstatic in terminal  
+(Optional , only used if we are using database operations)  
+Step 20: type "python manage.py makemigrations" in terminal  
+Step 21:type  "python manage.py migrate in terminal" in terminal  
+Step 22:  python manage.py runserver  
