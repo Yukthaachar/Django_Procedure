@@ -91,7 +91,7 @@ def home(request):
 {% endif %}
 </body>
 ```
- * we can use (p, ul, table)  where  p-paragraph, ul-unordered list, table-table*  
+*we can use (p, ul, table)  where  p-paragraph, ul-unordered list, table-table*  
    
 **Step15 :** in factorial/views.py, 
 ```
