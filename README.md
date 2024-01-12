@@ -3,14 +3,14 @@
 how to add multiple apps in a single project. 
 Here are the steps to follow :-
 
-# PHASE1: Project creation
+## PHASE1: Project creation##
 Step1 : django-admin startproject django1
 Step2 : cd django1
 Step3 : django-admin startapp factorial1
 Step4 : python manage.py runserver
 check if project is created by going here http://127.0.0.1:8000/
 
-# PHASE2: Creating urls
+## PHASE2: Creating urls ##
 Step5 : Create factorial1/templates/factorial1 folder    (appname/templates/appname)
 Step6:  Create index.html file with 'Hello World' and {{param1}}
 
@@ -52,7 +52,7 @@ You will get output as
 Hello World 
 hello world
 
-# PHASE3: Logic to be implemented in views.py
+## PHASE3: Logic to be implemented in views.py ## 
 Step12 :
 Something like this
 ```
@@ -66,7 +66,7 @@ def home(request):
     
 ```
 
-# PHASE4: add forms to take input from the user
+## PHASE4: add forms to take input from the user ##
  We can modify the code using forms
   Step13 : create forms.py in the factorial1 folder
          ```
@@ -121,7 +121,7 @@ Step15 : in factorial/views.py,
 
 ## we will make the modifications ##
 
-# PHASE5:
+## PHASE5: ##
 Step 16: make DEBUG = False in settings.py
 Step17: make 
 ```ALLOWED_HOSTS = ['*']```
