@@ -26,7 +26,7 @@
 INSTALLED_APPS = [...,"factorial1", ]
 ```
 
-**Step8 :** Go to views.py
+**Step8 :** Go to factorial1/views.py
 ```
 def home(request):
     return render(request,'factorial1/index.html',{'param1':”hello world”})
