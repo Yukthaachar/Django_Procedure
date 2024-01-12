@@ -29,7 +29,7 @@ INSTALLED_APPS = [...,"factorial1", ]
 **Step8 :** Go to factorial1/views.py
 ```
 def home(request):
-    return render(request,'factorial1/index.html',{'param1':”hello world”})
+    return render(request,'factorial1/index.html',{'param1':"hello world"})
 ```
 
 **Step9 :** Create urls.py in factorial1 and add
