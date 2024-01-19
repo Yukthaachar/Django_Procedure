@@ -8,7 +8,6 @@
 **Step2 :** cd django1  
 **Step3 :** django-admin startapp factorial1  
 **Step4 :** python manage.py runserver  
-**check if project is created by going here http://127.0.0.1:8000/**
 
 ## PHASE2: Creating urls 
 **Step5 :** Create factorial1/templates/factorial1 folder    (appname/templates/appname)  
@@ -43,7 +42,7 @@ urlpatterns = [path('', home),]
 ```
 from django.urls import include
 urlpatterns = [
-path("" ,include("factorial1.urls"))
+path("factorial1" ,include("factorial1.urls"))
 ]
 ```
 
