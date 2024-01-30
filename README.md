@@ -4,10 +4,22 @@
 *Here are the steps to follow :-*
 
 ## PHASE1: Project creation 
-**Step1 :** django-admin startproject django1  
-**Step2 :** cd django1  
-**Step3 :** django-admin startapp factorial1  
-**Step4 :** python manage.py runserver  
+**Step1 :** 
+```
+django-admin startproject django1
+```
+**Step2 :** 
+```
+cd django1
+```  
+**Step3 :** 
+```
+django-admin startapp factorial1  
+```
+**Step4 :** 
+```
+python manage.py runserver  
+```
 
 ## PHASE2: Creating urls 
 **Step5 :** Create factorial1/templates/factorial1 folder    (appname/templates/appname)  
