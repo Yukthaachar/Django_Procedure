@@ -4,7 +4,7 @@
 *Here are the steps to follow :-*
 
 ## PHASE1: Project creation 
-**Step1 :** 
+**Step1 :** In Terminal  
 ```
 django-admin startproject django1
 ```
@@ -51,11 +51,11 @@ urlpatterns = [path('', home),]
 ```
 
 **Step10 :** In django1/urls.py  
-10a:import include- It is used for including the content of a file into your current program.
+10a: import include- It is used for including the content of a file into your current program.
 ```
 from django.urls import include
 ```
-10b:Inside urlpatterns  add
+10b: Inside urlpatterns  add
 ```
 path("factorial1" ,include("factorial1.urls")),
 ```
