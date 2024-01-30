@@ -8,23 +8,31 @@
 ```
 django-admin startproject django1
 ```
+It is used to create a project with *folder name* and *project name* as ** django1**  
 **Step2 :** 
 ```
 cd django1
-```  
+```
+We changed the current dirctory to *django1*
 **Step3 :** 
 ```
 django-admin startapp factorial1  
 ```
+We created an app with *app name* as **factorial1**
 **Step4 :** 
 ```
 python manage.py runserver  
 ```
+Run the Django development server  
+If everything is okay with your Project, Django will start running the server at localhost port 8000 (127.0. 0.1:8000), and then you have to navigate to that link in your browser.  
 
 ## PHASE2: Creating urls 
-**Step5 :** Create factorial1/templates/html folder     
-**Step6:**  Create index.html file with 'Hello World' and {{param1}}  
-
+**Step5 :**  
+5a) In factorial1, create folder templates  
+5b) In factorial/templates, create folder html   
+5c) In factorial/templates/html, create file index.html  
+  
+**Step6:**  In index.html write a program which include 'Hello World' and {{param1}}  
 ```
 <body>
     <p>Hello World</p>
@@ -51,11 +59,11 @@ urlpatterns = [path('', home),]
 ```
 
 **Step10 :** In django1/urls.py  
-10a: import include- It is used for including the content of a file into your current program.
+10a) import include- It is used for including the content of a file into your current program.
 ```
 from django.urls import include
 ```
-10b: Inside urlpatterns  add
+10b) Inside urlpatterns  add
 ```
 path("factorial1" ,include("factorial1.urls")),
 ```
