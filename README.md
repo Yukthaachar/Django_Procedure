@@ -9,16 +9,19 @@
 django-admin startproject django1
 ```
 It is used to create a project with *folder name* and *project name* as **django1**  
+
 **Step2 :** 
 ```
 cd django1
 ```
 We changed the current dirctory to *django1*  
+
 **Step3 :** 
 ```
 django-admin startapp factorial1  
 ```
-We created an app with *app name* as **factorial1**
+We created an app with *app name* as **factorial1**  
+
 **Step4 :** 
 ```
 python manage.py runserver  
