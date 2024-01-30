@@ -51,11 +51,13 @@ urlpatterns = [path('', home),]
 ```
 
 **Step10 :** In django1/urls.py
+10a:import include- It is used for including the content of a file into your current program.
 ```
 from django.urls import include
-urlpatterns = [
+```
+10b:Inside urlpatterns  add
+```
 path("factorial1" ,include("factorial1.urls"))
-]
 ```
 
 **Step11 :** python manage.py runserver  
