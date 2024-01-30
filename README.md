@@ -22,7 +22,7 @@ python manage.py runserver
 ```
 
 ## PHASE2: Creating urls 
-**Step5 :** Create factorial1/templates/factorial1 folder    (appname/templates/appname)  
+**Step5 :** Create factorial1/templates/html folder     
 **Step6:**  Create index.html file with 'Hello World' and {{param1}}  
 
 ```
