@@ -32,8 +32,8 @@ If everything is okay with your Project, Django will start running the server at
 ## PHASE2: Creating urls 
 **Step5 :**  
 5a) In factorial1, create folder templates  
-5b) In factorial/templates, create folder html   
-5c) In factorial/templates/html, create file index.html  
+5b) In factorial1/templates, create folder html   
+5c) In factorial1/templates/html, create file index.html  
   
 **Step6:**  In index.html write a program which include 'Hello World' and {{param1}}  
 ```
