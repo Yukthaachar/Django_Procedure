@@ -63,10 +63,10 @@ urlpatterns = [path('', home),]
 This is not mandatory to create urls.py for each apps. you can add all apps path in urls.py in main project.  
 It's an option that most Django developer seem to take advantage of because it helps keep your code organized - i,e; the urls relevant to a specific app live in that app's folder.  
 
-**Step10 :** In django1/urls.py 
-There will be  two parts :
-10a) After ```from django.urls import path```
-import include- It is used for including the content of a file into your current program.
+**Step10 :** In django1/urls.py  
+There will be  two parts :  
+10a) After ```from django.urls import path```  
+import include- It is used for including the content of a file into your current program.  
 ```
 from django.urls import include
 ```
