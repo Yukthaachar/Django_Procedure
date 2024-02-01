@@ -51,7 +51,7 @@ INSTALLED_APPS = [...,"factorial1", ]
 **Step8 :** Go to factorial1/views.py
 ```
 def home(request):
-    return render(request,'factorial1/index.html',{'param1':"hello world"})
+    return render(request,'html/index.html',{'param1':"hello world"})
 ```
 
 **Step9 :** Create urls.py in factorial1 and add
@@ -63,8 +63,10 @@ urlpatterns = [path('', home),]
 This is not mandatory to create urls.py for each apps. you can add all apps path in urls.py in main project.  
 It's an option that most Django developer seem to take advantage of because it helps keep your code organized - i,e; the urls relevant to a specific app live in that app's folder.  
 
-**Step10 :** In django1/urls.py  
-10a) import include- It is used for including the content of a file into your current program.
+**Step10 :** In django1/urls.py 
+There will be  two parts :
+10a) After ```from django.urls import path```
+import include- It is used for including the content of a file into your current program.
 ```
 from django.urls import include
 ```
@@ -73,10 +75,13 @@ from django.urls import include
 path("factorial1" ,include("factorial1.urls")),
 ```
 
-**Step11 :** python manage.py runserver  
+**Step11 :** In Terminal run,  
+python manage.py runserver  
 You will get output as   
 Hello World   
 hello world  
+In Browser,
+We should make changes in the server at localhost port 8000 i.e; **127.0.0.1:8000/factorial1**
 
 ## PHASE3: Logic to be implemented in views.py 
 **Step12 :**
@@ -88,9 +93,17 @@ def home(request):
     n1=5
     for i in range(1,n1+1,1):
         result=result*i
-    return render(request,'fact1/index.html',{'param1':result,'param2':n1})
+    return render(request,'html/index.html',{'param1':result,'param2':n1})
     
 ```
+Also make changes in index.html  
+```
+<body>
+    <p>Hello World</p>
+    <p>The factorial of {{param1}} is {{param2}}</p>
+</body>
+```  
+We should get output as *The factorial of 5 is 120*  
 
 ## PHASE4: add forms to take input from the user ##
  We can modify the code using forms  
@@ -130,10 +143,10 @@ def home(request):
             data=form1.cleaned_data
             n1=data.get("input")
             result=fact(n1)
-            return render(request,"factorial1/index.html",{'param1':result, 'param2':n1, 'form':form1})
+            return render(request,"html/index.html",{'param1':result, 'param2':n1, 'form':form1})
     else:
         form1=inputform()  
-    return render(request,"factorial1/index.html",{'param1':result, 'param2':n1, 'form':form1})
+    return render(request,"html/index.html",{'param1':result, 'param2':n1, 'form':form1})
 ```
 ```
 def fact(n1):  
