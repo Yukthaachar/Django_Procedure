@@ -28,6 +28,8 @@ python manage.py runserver
 ```
 Run the Django development server  
 If everything is okay with your Project, Django will start running the server at localhost port 8000 (127.0. 0.1:8000), and then you have to navigate to that link in your browser.  
+  
+If you are doing multiple apps in same project you might get *Page Not Found Error*, You can ignore it.  
 
 ## PHASE2: Creating urls 
 **Step5 :**  
