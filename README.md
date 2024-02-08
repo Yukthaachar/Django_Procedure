@@ -78,7 +78,9 @@ path("factorial1" ,include("factorial1.urls")),
 ```
 
 **Step11 :** In Terminal run,  
-python manage.py runserver  
+```
+python manage.py runserver
+```  
 You will get output as   
 Hello World   
 hello world  
