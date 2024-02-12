@@ -34,7 +34,7 @@ If you are doing multiple apps in same project you might get *Page Not Found Err
 ## PHASE2: Creating urls 
 **Step5 :**  
 5a) In factorial1, create folder templates  
-5b) In factorial1/templates, create folder html   
+5b) In factorial1/templates, create folder factorial1   
 5c) In factorial1/templates/html, create file index.html  
   
 **Step6:**  In index.html write a program which include 'Hello World' and {{param1}}  
@@ -53,7 +53,7 @@ INSTALLED_APPS = [...,"factorial1", ]
 **Step8 :** Go to factorial1/views.py
 ```
 def home(request):
-    return render(request,'html/index.html',{'param1':"hello world"})
+    return render(request,'factorial1/index.html',{'param1':"hello world"})
 ```
 
 **Step9 :** Create urls.py in factorial1 and add
@@ -97,7 +97,7 @@ def home(request):
     n1=5
     for i in range(1,n1+1,1):
         result=result*i
-    return render(request,'html/index.html',{'param1':result,'param2':n1})
+    return render(request,'factorial1/index.html',{'param1':result,'param2':n1})
     
 ```
 Also make changes in index.html  
@@ -147,10 +147,10 @@ def home(request):
             data=form1.cleaned_data
             n1=data.get("input")
             result=fact(n1)
-            return render(request,"html/index.html",{'param1':result, 'param2':n1, 'form':form1})
+            return render(request,"factorial1/index.html",{'param1':result, 'param2':n1, 'form':form1})
     else:
         form1=inputform()  
-    return render(request,"html/index.html",{'param1':result, 'param2':n1, 'form':form1})
+    return render(request,"factorial1/index.html",{'param1':result, 'param2':n1, 'form':form1})
 ```
 ```
 def fact(n1):  
