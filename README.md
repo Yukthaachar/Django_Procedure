@@ -35,7 +35,7 @@ If you are doing multiple apps in same project you might get *Page Not Found Err
 **Step5 :**  
 5a) In factorial1, create folder templates  
 5b) In factorial1/templates, create folder factorial1   
-5c) In factorial1/templates/html, create file index.html  
+5c) In factorial1/templates/factorial1, create file index.html  
   
 **Step6:**  In index.html write a program which include 'Hello World' and {{param1}}  
 ```
