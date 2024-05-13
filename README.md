@@ -67,11 +67,10 @@ It's an option that most Django developer seem to take advantage of because it h
 
 **Step10 :** In django1/urls.py  
 There will be  two parts :  
-10a) After ```from django.urls import path```  
-import include- It is used for including the content of a file into your current program.  
+10a) import include- It is used for including the content of a file into your current program. 
 ```
-from django.urls import include
-```
+from django.urls import path,include
+```  
 10b) Inside urlpatterns  add
 ```
 path("factorial1" ,include("factorial1.urls")),
