@@ -115,7 +115,7 @@ We should get output as *The factorial of 5 is 120*
 from django import forms
 class inputform(forms.Form):
     name=forms.CharField(max_length=10)
-    input=forms.IntegerField(min_value=10,max_value=10)
+    input=forms.IntegerField(min_value=10,max_value=10,label='enter a number')
 ```
   
 
